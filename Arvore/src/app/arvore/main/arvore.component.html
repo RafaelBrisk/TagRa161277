@@ -1,0 +1,13 @@
+<span>Clique no Pai Para Adicionar um Filho</span>
+<br><br>
+<div *ngIf="raiz">
+  <div *ngFor="let e of exibicao">
+    <pre (click)="selectPai(e.pai)" style="cursor: pointer;">{{e.e}}</pre>
+  </div>
+</div>
+
+<br><br><br>
+<novo-filho
+  [pai]="pai"
+  (filho)="criarFilho($event)"
+></novo-filho>

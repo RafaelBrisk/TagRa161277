@@ -1,0 +1,26 @@
+<div *ngIf="arvore">
+  <table>
+    <thead>
+      <tr>
+        <th>Pai</th>
+        <th>Nome</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input type="text" name="arvore_pai" [(ngModel)]="arvore.pai.nome" readonly style="background-color: #bbb">
+        </td>
+        <td>
+          <input type="text" [(ngModel)]="arvore.nome" name="arvore_nome" required>
+        </td>
+        <td>
+          <input type="number" [(ngModel)]="arvore.valor" name="arvore_valor" required>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <button type="button" (click)="sendFilho()">Adicionar</button>
+</div>
